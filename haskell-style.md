@@ -11,7 +11,7 @@ Formatting
 
 ### Line Length
 
-Maximum line length is *80 characters*.
+Maximum line length is *100 characters*.
 
 ### Indentation
 
