@@ -18,7 +18,9 @@ Maximum line length is *100 characters*.
 Tabs are illegal. Use spaces for indenting.  Indent your code blocks
 with *4 spaces*.  Indent the `where` keyword two spaces to set it
 apart from the rest of the code and indent the definitions in a
-`where` clause 2 spaces. Some examples:
+`where` clause 2 spaces. *Indent guards with two spaces*
+
+Some examples:
 
 ```haskell
 sayHello :: IO ()
@@ -31,8 +33,10 @@ sayHello = do
 filter :: (a -> Bool) -> [a] -> [a]
 filter _ []     = []
 filter p (x:xs)
-    | p x       = x : filter p xs
-    | otherwise = filter p xs
+  | p x        = x : filter p xs
+  | otherwise  = filter p xs
+  where
+    np = not p
 ```
 
 ### Blank Lines
